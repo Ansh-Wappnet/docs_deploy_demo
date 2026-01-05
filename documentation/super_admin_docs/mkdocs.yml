@@ -1,8 +1,8 @@
 site_name: My Docs
-site_url: https://ansh-wappnet.github.io/docs_deploy_demo/super_admin_docs/
+site_url: https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/
 
 docs_dir: docs
-site_dir: site
+site_dir: ../../.site/super-admin
 
 theme:
   name: material
