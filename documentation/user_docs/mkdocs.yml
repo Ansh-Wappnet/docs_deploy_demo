@@ -1,8 +1,5 @@
-site_name: My Docs
+site_name: User Docs
 site_url: https://ansh-wappnet.github.io/docs_deploy_demo/user/
-
-docs_dir: docs
-site_dir: ../../.site/user
 
 theme:
   name: material
