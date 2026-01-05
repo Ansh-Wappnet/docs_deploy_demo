@@ -1,1 +1,11 @@
 site_name: My Docs
+site_url: https://ansh-wappnet.github.io/docs_deploy_demo/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
