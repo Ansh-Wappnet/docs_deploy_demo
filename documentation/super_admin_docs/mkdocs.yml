@@ -1,5 +1,5 @@
 site_name: Super Admin Docs
-site_url: https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/
+site_url: https://ansh-wappnet.github.io/super-admin/
 
 theme:
   name: material

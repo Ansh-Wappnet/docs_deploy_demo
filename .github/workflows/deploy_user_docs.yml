@@ -1,0 +1,42 @@
+name: Deploy User Docs
+
+on:
+  push:
+    branches:
+      - mkdocs
+    paths:
+      - 'documentation/user_docs/**'
+      - '.github/workflows/deploy_user_docs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+
+      - name: Build User Docs
+        run: |
+          mkdocs build -f documentation/user_docs/mkdocs.yml -d user
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: user
+          destination_dir: user
+          publish_branch: gh-pages
+          keep_files: true

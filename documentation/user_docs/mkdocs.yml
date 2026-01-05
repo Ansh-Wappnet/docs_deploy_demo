@@ -1,5 +1,5 @@
 site_name: User Docs
-site_url: https://ansh-wappnet.github.io/docs_deploy_demo/user/
+site_url: https://ansh-wappnet.github.io/user/
 
 theme:
   name: material

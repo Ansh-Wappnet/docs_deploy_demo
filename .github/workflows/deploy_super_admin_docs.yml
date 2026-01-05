@@ -1,0 +1,42 @@
+name: Deploy Super Admin Docs
+
+on:
+  push:
+    branches:
+      - mkdocs
+    paths:
+      - 'documentation/super_admin_docs/**'
+      - '.github/workflows/deploy_super_admin_docs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+
+      - name: Build Super Admin Docs
+        run: |
+          mkdocs build -f documentation/super_admin_docs/mkdocs.yml -d super-admin
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: super-admin
+          destination_dir: super-admin
+          publish_branch: gh-pages
+          keep_files: true
