@@ -29,19 +29,23 @@ jobs:
 
       - name: Build User Docs
         run: |
-          mkdocs build -f documentation/user_docs/mkdocs.yml -d site/user
+          mkdocs build -f documentation/user_docs/mkdocs.yml -d ../../.site/user
 
       - name: Build Super Admin Docs
         run: |
-          mkdocs build -f documentation/super_admin_docs/mkdocs.yml -d site/super-admin
+          mkdocs build -f documentation/super_admin_docs/mkdocs.yml -d ../../.site/super-admin
+
+      - name: Generate Landing Page
+        run: |
+          python generate_landing.py
 
       - name: Verify build output
         run: |
-          ls -R site
+          ls -R .site
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
+          publish_dir: .site
           publish_branch: gh-pages
