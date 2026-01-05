@@ -1,5 +1,20 @@
-site_name: My Docs
+site_name: Super Admin Docs
 site_url: https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/
 
 theme:
   name: material
+
+nav:
+  - Overview: index.md
+  - Dashboard: super-admin/dashboard.md
+  - Clients Management:
+      - Clients: super-admin/clients.md
+      - Domains: super-admin/domains.md
+  - Base Configuration:
+      - Modules: super-admin/modules.md
+      - Permissions: super-admin/permissions.md
+      - Rule Components: super-admin/rule-components.md
+      - Subscription Plans: super-admin/subscription-plans.md
+  - Operations: super-admin/operations.md
+  - Access Control: super-admin/access.md
+  - Reference: super-admin/reference.md
