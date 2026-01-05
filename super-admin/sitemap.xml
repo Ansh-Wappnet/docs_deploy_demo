@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/</loc>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/access/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/clients/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/dashboard/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/domains/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/modules/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/operations/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/overview/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/permissions/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/reference/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/rule-components/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/super-admin/subscription-plans/</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
 </urlset>
