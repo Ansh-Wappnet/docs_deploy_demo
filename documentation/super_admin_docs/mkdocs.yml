@@ -3,6 +3,3 @@ site_url: https://ansh-wappnet.github.io/docs_deploy_demo/super-admin/
 
 theme:
   name: material
-
-nav:
-  - Home: index.md

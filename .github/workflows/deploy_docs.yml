@@ -3,7 +3,7 @@ name: Deploy User & Super Admin Docs
 on:
   push:
     branches:
-      - mkdocs   
+      - mkdocs
 
 permissions:
   contents: write
@@ -18,11 +18,12 @@ jobs:
         with:
           ref: mkdocs
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install MkDocs
         run: |
           pip install mkdocs mkdocs-material
 
@@ -34,8 +35,13 @@ jobs:
         run: |
           mkdocs build -f documentation/super_admin_docs/mkdocs.yml -d site/super-admin
 
-      - name: Deploy to GitHub Pages
+      - name: Verify build output
+        run: |
+          ls -R site
+
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site
+          publish_branch: gh-pages
