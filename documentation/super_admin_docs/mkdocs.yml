@@ -3,18 +3,38 @@ site_url: https://ansh-wappnet.github.io/super-admin/
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette: 
+    - scheme: default
+      primary: white
+      accent: light-blue
+    - scheme: slate # This enables Dark Mode
+      primary: black
+      accent: light-blue
+  features:
+    - navigation.tabs # Top horizontal menu
+    - navigation.sections
+    - search.suggest
+    - content.code.copy # Adds a copy button to code blocks
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 nav:
-  - Overview: index.md
-  - Dashboard: super-admin/dashboard.md
-  - Clients Management:
+  - Super Admin Panel:
+    - Overview: index.md
+    - Access & Authentication: super-admin/access.md
+    - Dashboard: super-admin/dashboard.md
+    - Clients Management:
       - Clients: super-admin/clients.md
       - Domains: super-admin/domains.md
-  - Base Configuration:
+    - Base Configuration:
       - Modules: super-admin/modules.md
       - Permissions: super-admin/permissions.md
       - Rule Components: super-admin/rule-components.md
       - Subscription Plans: super-admin/subscription-plans.md
-  - Operations: super-admin/operations.md
-  - Access Control: super-admin/access.md
-  - Reference: super-admin/reference.md
+    - Operations: super-admin/operations.md
+    - Reference: super-admin/reference.md

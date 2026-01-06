@@ -3,3 +3,49 @@ site_url: https://ansh-wappnet.github.io/user/
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette: 
+    - scheme: default
+      primary: white
+      accent: light-blue
+    - scheme: slate # This enables Dark Mode
+      primary: black
+      accent: light-blue
+  features:
+    - navigation.tabs # Top horizontal menu
+    - navigation.sections
+    - search.suggest
+    - content.code.copy # Adds a copy button to code blocks
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Overview: index.md
+  - Dashboard: dashboard.md
+  - Data Connectors:
+    - Connector Hub: data-connectors/hub.md
+    - File Upload: data-connectors/file-upload.md
+    - API Setup: data-connectors/api-setup.md
+    - SFTP Server: data-connectors/sftp-server.md
+  - Rules Engine:
+    - Overview: rules-engine/overview.md
+    - Rule Builder: rules-engine/rule-builder.md
+  - Data Pipeline:
+    - Overview: data-pipelines/overview.md
+    - Create Pipeline: data-pipelines/creation.md
+  - Reconciliation:
+    - Dashboard: reconciliation/dashboard.md
+    - Matching Workspace: reconciliation/workspace.md
+  - Analytics:
+    - Executive Dashboard: analytics/executive-dashboard.md
+  - Admin:
+    - Dashboard: admin/dashboard.md
+    - User Management: admin/user-management.md
+    - Roles & Permissions: admin/roles-permissions.md
+    - Audit Log: admin/audit-log.md
+    - System Settings: admin/system-settings.md
+
